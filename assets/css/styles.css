@@ -1,4 +1,3 @@
-
 @import url(assets/fonts/font.css);
 
 /* Reset */
@@ -96,18 +95,6 @@ body {
   width: 100%;
 }
 
-/* Hamburger menu for mobile */
-@media (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .navbar-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
 
 /* HERO SECTION */
 
@@ -138,22 +125,18 @@ body {
   font-size: 4rem;
   /* font-weight: 700; */
   margin-bottom: 15px;
-font-family: 'Milven', serif;
+  font-family: 'Milven', serif;
 
 }
 
-/* .hero-text p {
-  font-size: 4rem;
-  opacity: 0.8;
-font-family: 'Mindway', serif;
-} */
 
 
 .hero-text p {
   font-size: 2.5rem;
   opacity: 0.8;
   font-family: 'Mindway', serif;
-  background: rgba(0, 0, 0, 0.7); /* overlay */
+  background: rgba(0, 0, 0, 0.7);
+  /* overlay */
   padding: 5px 10px;
   border-radius: 3px;
   display: inline-block;
@@ -162,15 +145,37 @@ font-family: 'Mindway', serif;
 }
 
 
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 40px;
+  border: 1px solid #ffffff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  background: transparent;
+
+
+}
+
+.hero-btn:hover {
+ border-color: #d4af37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
 /* ---------------- VIDEO SECTION ---------------- */
 
 .video-section {
   width: 100%;
-  height: 100vh;   /* Full height */
+  height: 100vh;
+  /* Full height */
   position: relative;
   overflow: hidden;
 
-  margin-top: 20px; ;
+  margin-top: 20px;
+  ;
 }
 
 .bg-video {
@@ -250,7 +255,7 @@ font-family: 'Mindway', serif;
   line-height: 1;
   opacity: 0.95;
   letter-spacing: 0.5px;
-    font-family: 'Mindway', serif;
+  font-family: 'Mindway', serif;
 
 }
 
@@ -298,7 +303,7 @@ font-family: 'Mindway', serif;
   font-size: 2rem;
   line-height: 1;
   letter-spacing: 0.5px;
-    font-family: 'Mindway', serif;
+  font-family: 'Mindway', serif;
 }
 
 .image-left-bottom {
