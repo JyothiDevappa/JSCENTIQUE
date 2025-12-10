@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Perfume</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
   <link rel="stylesheet" href="assets/fonts/font.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -56,22 +59,22 @@
   </nav>
 
   <!-- HERO SECTION -->
-<section class="hero" id="home">
-  <div class="hero-content">
+  <section class="hero" id="home">
+    <div class="hero-content">
 
-    <div class="hero-text">
-      <h1>J SCENTIQUE</h1>
-      <p>Where elegance meets timeless fragrance..</p>
-      <!-- Full line border button with arrow -->
-      <a href="#newarrivals" class="hero-btn">Check New Arrivals →</a>
+      <div class="hero-text">
+        <h1>J SCENTIQUE</h1>
+        <p>Where elegance meets timeless fragrance..</p>
+        <!-- Full line border button with arrow -->
+        <a href="#newarrivals" class="hero-btn">Check New Arrivals →</a>
+      </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
-  
+
   <!-- SECOND SECTION -->
   <section class="video-section" id="bestseller">
     <video class="bg-video" autoplay muted loop playsinline>
@@ -86,11 +89,14 @@
   <!-- THIRD SECTION -->
   <section class="third-section" id="about">
     <div class="third-content">
+
       <div class="third-top-left">
-        <h2>Our Perfume Legacy</h2>
-        <p>Discover the art of fragrance. Each bottle tells a story of elegance, passion, and timeless beauty.</p>
+        <h2>Signature Scents</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.</p>
       </div>
-      
+
       <div class="third-top-right">
         <div class="image-right-top">
           <img src="assets/images/b.png" alt="Perfume Top">
@@ -104,35 +110,22 @@
       </div>
 
       <div class="third-bottom-right">
-        <h3>Exquisite Craftsmanship</h3>
-        <p>Each fragrance is meticulously blended with the finest ingredients sourced from across the globe. Our master perfumers bring decades of expertise to create unforgettable scents that captivate the senses.</p>
+        <h3>Timeless Elegance</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
       </div>
+
+
+
     </div>
   </section>
 
 
 
-<script>
-  // Hamburger Menu Toggle
-  const hamburger = document.getElementById('hamburger');
-  const navMenuMobile = document.getElementById('navMenuMobile');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenuMobile.classList.toggle('active');
-  });
-
-  // Close mobile menu when a link is clicked
-  const mobileLinks = navMenuMobile.querySelectorAll('.nav-link');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenuMobile.classList.remove('active');
-    });
-  });
-</script>
+  <script src="assets/javascript/bestseller.js"></script>
 
 
 
 </body>
+
 </html>
