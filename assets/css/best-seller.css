@@ -7,9 +7,7 @@
             position: relative;
             display: flex;
             align-items: center;
-            /* vertical center */
             padding-left: 80px;
-            /* left side */
             justify-content: space-between;
             padding-right: 80px;
         }

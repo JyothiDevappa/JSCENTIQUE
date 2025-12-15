@@ -1,25 +1,3 @@
-/* -------------------------------------------------------
-    MOBILE NAVIGATION (HAMBURGER MENU)
--------------------------------------------------------- */
-
-// Select hamburger icon and mobile menu
-const hamburger = document.getElementById('hamburger');
-const navMenuMobile = document.getElementById('navMenuMobile');
-
-// Toggle mobile menu open/close
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenuMobile.classList.toggle('active');
-});
-
-// Close menu automatically when a link is clicked
-const mobileLinks = navMenuMobile.querySelectorAll('.nav-link');
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenuMobile.classList.remove('active');
-    });
-});
 
 
 /* -------------------------------------------------------
