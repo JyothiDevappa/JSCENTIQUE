@@ -1,325 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Perfume Collection</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Perfume</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="stylesheet" href="../assets/fonts/font.css" />
-  <link rel="stylesheet" href="../assets/css/responsive.css" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
-  
-body {
-    /* background-image: url(../assets/images/about-1.png); */
-    background-color: rgb(0, 0, 0);
-
-  }
+:root {
+  --beige: #e0d6c3;
+  --dark: #0b0b0b;
+}
 
 
-  .contact-section {
-  color: #fff;
+a { text-decoration: none; color: inherit; }
+
+/* SECTION */
+.new-collection-section {
+  padding: 100px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-title {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-
-  font-family: 'Mindway', serif;
-
-
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.section-subtitle {
-  max-width: 500px;
-  opacity: 0.8;
-  margin-bottom: 50px;
-    font-family: 'Courier New', Courier, monospace;
-
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
 }
 
-.contact-details {
+.section-title p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* GRID */
+.new-collection {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
-.contact-item h4 {
-  color: #d4af37;
-  margin-bottom: 10px;
+@media (max-width: 992px) {
+  .new-collection { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .new-collection { grid-template-columns: 1fr; }
+  .new-collection-section { padding: 60px 20px; }
 }
 
-.contact-item p {
-  font-size: 14px;
-  line-height: 1.8;
-  opacity: 0.85;
+/* PRODUCT CARD */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
+.product-card:hover { transform: scale(1.02); }
 
-/* ==========================
-   TABLET + MOBILE (max-width: 991px)
-========================== */
-@media (max-width: 991px) {
-
-  .section-title {
-    font-size: 2.6rem;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    max-width: 100%;
-    text-align: center;
-    margin: 0 auto 35px;
-    font-size: 0.95rem;
-  }
-
-  /* ✅ ONE BELOW ONE */
-  .contact-details {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .contact-item {
-    text-align: center;
-  }
+.product-image {
+  position: relative;
+  overflow: hidden;
 }
 
+.product-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
 
+.product-card:hover img { transform: scale(1.03); }
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  padding: 4px 8px;
+  background: #1a1a1a;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--beige);
+}
+
+/* QUICK VIEW BUTTON */
+.quick-view-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--beige);
+  color: var(--dark);
+  border: none;
+  padding: 8px 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.quick-view-btn:hover { background: #d1c3a1; }
+
+/* PRODUCT INFO */
+.product-info {
+  padding: 18px 0;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+
+.desc { font-size: 13px; opacity: 0.8; margin-bottom: 4px; }
+.ml { font-size: 12px; opacity: 0.6; margin-bottom: 12px; }
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.price { font-size: 16px; font-weight: 700; }
+
+.buy-now {
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.buy-now:hover { border-bottom-color: var(--beige); }
+
+.add-cart {
+  width: 100%;
+  padding: 10px 0;
+  background: var(--beige);
+  color: var(--dark);
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+.add-cart:hover { background: #d1c3a1; }
+/* QUICK VIEW MODAL */
+.quick-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  z-index: 999;
+}
+
+.quick-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px; /* smaller max width for mobile */
+  background: #fff;
+  display: none;
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Wrapper inside modal */
+.quick-wrapper {
+  display: flex;
+  flex-direction: column; /* stack image + content on mobile */
+  min-height: auto;
+}
+
+.quick-image {
+  width: 100%;
+  max-height: 220px;
+  overflow: hidden;
+}
+
+.quick-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quick-content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.quick-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.quick-wishlist {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-buy {
+  flex: 1; background: var(--dark); color:#fff; border:none; padding:12px; cursor:pointer;
+}
+.btn-cart {
+  flex: 1; border:1px solid var(--dark); background:none; padding:12px; cursor:pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:640px){
+  .quick-modal {
+    width: 90%;
+    max-width: 360px; /* tighter modal for mobile */
+  }
+
+  .quick-wrapper {
+    flex-direction: column;
+  }
+
+  .quick-image {
+    width: 100%;
+    max-height: 180px;
+  }
+
+  .quick-content {
+    width: 100%;
+    padding: 16px;
+  }
+}
 
 </style>
-
-
-
+</head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <button class="website-btn">
-        <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
-      </button>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="../index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/about.html" class="nav-link active">About</a>
-        </li>
-      </ul>
-      <!-- Hamburger Menu -->
-      <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    <!-- Mobile Menu -->
-    <ul class="nav-menu-mobile" id="navMenuMobile">
-      <li class="nav-item">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/about.html" class="nav-link active">About</a>
-      </li>
-    </ul>
-  </nav>
+<section class="new-collection-section">
+  <div class="section-title">
+    <h2>New Collections</h2>
+    <p>Discover our latest handpicked fragrances</p>
+  </div>
 
+  <div class="new-collection">
 
-
-
-  
-  <!-- THIRD SECTION -->
-  <section class="third-section" id="about" style="margin-top: 100px;">
-    <div class="third-content">
-
-      <div class="third-top-left">
-        <h2>About Us</h2>
-        <p style="color: aliceblue !important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">NEW</span>
+        <img src="../assets/images/img3.png" alt="Perfume 1">
+        <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Wedding Edition',
+          '₹ 2,499',
+          '100 ML',
+          'Floral • Amber • Musk',
+          'Crafted for unforgettable wedding celebrations.',
+          '../assets/images/Wedding2.webp'
+        )">Quick View</button>
       </div>
-
-      <div class="third-top-right">
-        <div class="image-right-top">
-          <img src="../assets/images/about-1.png" alt="Perfume Top">
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">100 ML</p>
+        <div class="price-row">
+          <span class="price">₹2,499</span>
+          <a href="#" class="buy-now">Buy Now</a>
         </div>
+        <button class="add-cart">Add to Cart</button>
       </div>
+    </div>
 
-      <div class="third-bottom-left">
-        <div class="image-left-bottom">
-          <img src="../assets/images/about-2.png" alt="Perfume Bottom">
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">LIMITED</span>
+        <img src="../assets/images/new.png" alt="Perfume 2">
+        <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Celebration Night',
+          '₹ 2,299',
+          '75 ML',
+          'Warm Floral • Vanilla',
+          'A soft yet memorable scent for festive nights.',
+          '../assets/images/new.png'
+        )">Quick View</button>
+      </div>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">75 ML</p>
+        <div class="price-row">
+          <span class="price">₹2,299</span>
+          <a href="#" class="buy-now">Buy Now</a>
         </div>
+        <button class="add-cart">Add to Cart</button>
       </div>
-
-      <div class="third-bottom-right">
-        <h3>The Art of Perfume Making</h3>
-        <p style="color: aliceblue !important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.</p>
-      </div>
-
-
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="testimonials-inner">
-
-    <h2>What Our Customers Say</h2>
-
-    <div class="testimonial-slider">
-
-      <div class="testimonial active">
-        <img src="../assets/images/testimonials-1.jpg" alt="Customer">
-        <p>
-          “Absolutely mesmerising fragrances. Long-lasting and truly luxurious.
-          J SCENTIQUE has become my signature scent.”
-        </p>
-        <h4>Aarav Mehta <span>• Mumbai</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="../assets/images/testimonials-2.jpg" alt="Customer">
-        <p>
-          “The packaging, the scent, the experience — everything feels premium.
-          Highly recommended for perfume lovers.”
-        </p>
-        <h4>Ananya Sharma <span>• Delhi</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="../assets/images/testimonials-3.jpg" alt="Customer">
-        <p>
-          “I’ve received endless compliments. These perfumes are elegant,
-          refined and perfect for every occasion.”
-        </p>
-        <h4>Rohan Verma <span>• Bengaluru</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="../assets/images/testimonials-2.jpg" alt="Customer">
-        <p>
-          “A luxury fragrance brand that actually delivers quality.
-          Totally worth it!”
-        </p>
-        <h4>Priya Nair <span>• Kochi</span></h4>
-      </div>
-
-    </div>
-
-    <!-- DOTS -->
-    <div class="testimonial-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
     </div>
 
   </div>
 </section>
 
-
-
-
-
-  
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="newsletter-inner">
-    <h2>Stay in the World of Fine Fragrance</h2>
-    <p>Be the first to discover new arrivals, exclusive offers & signature scents.</p>
-
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
+<!-- QUICK VIEW MODAL -->
+<div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
+<div class="quick-modal" id="quickModal">
+  <button class="quick-close" onclick="closeQuickView()">×</button>
+  <button class="quick-wishlist" onclick="toggleHeart(this)">♡</button>
+  <div class="quick-wrapper">
+    <div class="quick-image"><img id="qImage"></div>
+    <div class="quick-content">
+      <span class="quick-tag">NEW ARRIVAL</span>
+      <h2 id="qName"></h2>
+      <p class="quick-notes" id="qNotes"></p>
+      <p class="quick-desc" id="qDesc"></p>
+      <div class="quick-meta">
+        <span id="qSize"></span>
+        <strong id="qPrice"></strong>
+      </div>
+      <div class="quick-actions">
+        <button class="btn-buy">Buy Now</button>
+        <button class="btn-cart">Add to Bag</button>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <!-- BRAND -->
-    <div class="footer-col">
-      <h3 class="footer-logo">J SCENTIQUE</h3>
-      <p class="footer-about">
-        Crafting timeless fragrances inspired by elegance, passion, and individuality.
-        Discover scents that leave a lasting impression.
-      </p>
-    </div>
-
-    <!-- QUICK LINKS -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- CUSTOMER CARE -->
-    <div class="footer-col">
-      <h4>Customer Care</h4>
-      <ul>
-        <li><a href="#">Shipping & Delivery</a></li>
-        <li><a href="#">Returns & Refunds</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="footer-col">
-      <h4>Get in Touch</h4>
-      <p>
-        📍 Bengaluru, Karnataka, India<br>
-        📞 +91 98765 43210<br>
-        ✉️ support@jscentique.in
-      </p>
-    </div>
-
-  </div>
-
-  <!-- BOTTOM -->
-  <div class="footer-bottom">
-    <p>© 2025 J SCENTIQUE. All rights reserved.</p>
-  </div>
-</footer>
-
-
-      <script src="../assets/javascript/index.js"></script>
 
 </body>
 </html>

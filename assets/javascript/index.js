@@ -84,3 +84,38 @@ mobileLinks.forEach(link => {
     currentIndex = (currentIndex + 1) % testimonials.length;
     showTestimonial(currentIndex);
   }, 2000);
+
+
+
+
+
+
+  // quik view
+
+  
+const quickOverlay = document.getElementById('quickOverlay');
+const quickModal = document.getElementById('quickModal');
+const qName = document.getElementById('qName');
+const qPrice = document.getElementById('qPrice');
+const qSize = document.getElementById('qSize');
+const qNotes = document.getElementById('qNotes');
+const qDesc = document.getElementById('qDesc');
+const qImage = document.getElementById('qImage');
+
+function openQuickView(name, price, size, notes, desc, img) {
+  qName.innerText = name;
+  qPrice.innerText = price;
+  qSize.innerText = size;
+  qNotes.innerText = notes;
+  qDesc.innerText = desc;
+  qImage.src = img;
+  quickOverlay.style.display = 'block';
+  quickModal.style.display = 'block';
+}
+function closeQuickView() {
+  quickOverlay.style.display = 'none';
+  quickModal.style.display = 'none';
+}
+function toggleHeart(btn){
+  btn.classList.toggle('active');
+}

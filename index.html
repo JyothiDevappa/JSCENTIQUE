@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -77,98 +80,223 @@
 
 
 
-  <!-- ================= NEW COLLECTION SECTION ================= -->
-  <section class="new-collection-section">
-    <div class="section-title">
-      <h2>New Collections</h2>
-      <p>Discover our latest handpicked fragrances</p>
-    </div>
+<!-- ================= NEW COLLECTION SECTION ================= -->
+<section class="new-collection-section">
+  <div class="section-title">
+    <h2>New Collections</h2>
+    <p>Discover our latest handpicked fragrances</p>
+  </div>
 
-    <div class="new-collection">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <div class="product-image">
-          <span class="badge">New</span>
-          <img src="assets/images/img3.png" alt="Perfume 1">
-        </div>
-        <div class="product-info">
-          <h3>J SCENTIQUE</h3>
-          <p class="desc">Eau de Parfum – Floral Blend</p>
-          <p class="ml">50ml</p>
-          <p class="price">$120</p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
+  <div class="new-collection">
+
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">NEW</span>
+        <img src="../assets/images/img3.png" alt="Perfume 1">
+        <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Wedding Edition',
+          '₹ 2,499',
+          '100 ML',
+          'Floral • Amber • Musk',
+          'Crafted for unforgettable wedding celebrations.',
+          '../assets/images/Wedding2.webp'
+        )">Quick View</button>
       </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <div class="product-image">
-          <span class="badge">New</span>
-          <img src="assets/images/international-fragrance-day.avif" alt="Perfume 2">
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">100 ML</p>
+        <div class="price-row">
+          <span class="price">₹2,499</span>
+          <a href="#" class="buy-now">Buy Now</a>
         </div>
-        <div class="product-info">
-          <h3>J SCENTIQUE</h3>
-          <p class="desc">Eau de Parfum – Woody Aroma</p>
-          <p class="ml">75ml</p>
-          <p class="price">$140</p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <div class="product-image">
-          <span class="badge">New</span>
-          <img src="assets/images/Does-perfume-expire.jpg" alt="Perfume 3">
-        </div>
-        <div class="product-info">
-          <h3>J SCENTIQUE</h3>
-          <p class="desc">Eau de Parfum – Citrus Fresh</p>
-          <p class="ml">50ml</p>
-          <p class="price">$160</p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <div class="product-image">
-          <span class="badge">New</span>
-          <img src="assets/images/perfume-1.webp" alt="Perfume 4">
-        </div>
-        <div class="product-info">
-          <h3>J SCENTIQUE</h3>
-          <p class="desc">Eau de Parfum – Oriental Spice</p>
-          <p class="ml">100ml</p>
-          <p class="price">$180</p>
-          <a href="#" class="buy-btn">Buy Now</a>
-        </div>
+        <button class="add-cart">Add to Cart</button>
       </div>
     </div>
-  </section>
 
-
-
-
-  <!-- SECOND SECTION -->
-  <section class="video-section" id="bestseller">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="assets/videos/vid.mp4" type="video/mp4">
-    </video>
-
-    <div class="video-overlay">
-
-      <p class="video-top-line">Get ready. It’s worth the wait.</p>
-
-      <h2 class="video-text">Coming soon</h2>
-
-      <p class="video-bottom-line">www.jscentique.com</p>
-
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">NEW</span>
+        <img src="../assets/images/new.png" alt="Perfume 2">
+        <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Celebration Night',
+          '₹ 2,299',
+          '75 ML',
+          'Warm Floral • Vanilla',
+          'A soft yet memorable scent for festive nights.',
+          '../assets/images/new.png'
+        )">Quick View</button>
+      </div>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">75 ML</p>
+        <div class="price-row">
+          <span class="price">₹2,299</span>
+          <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
     </div>
-  </section>
+
+
+    
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">NEW</span>
+        <img src="../assets/images/new.png" alt="Perfume 2">
+        <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Celebration Night',
+          '₹ 2,299',
+          '75 ML',
+          'Warm Floral • Vanilla',
+          'A soft yet memorable scent for festive nights.',
+          '../assets/images/new.png'
+        )">Quick View</button>
+      </div>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">75 ML</p>
+        <div class="price-row">
+          <span class="price">₹2,299</span>
+          <a href="#" class="buy-now">Buy Now</a>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+
+    
+  </div>
+</section>
+
+<!-- QUICK VIEW MODAL -->
+<div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
+<div class="quick-modal" id="quickModal">
+  <button class="quick-close" onclick="closeQuickView()">×</button>
+  <button class="quick-wishlist" onclick="toggleHeart(this)">♡</button>
+  <div class="quick-wrapper">
+    <div class="quick-image"><img id="qImage"></div>
+    <div class="quick-content">
+      <span class="quick-tag">NEW ARRIVAL</span>
+      <h2 id="qName"></h2>
+      <p class="quick-notes" id="qNotes"></p>
+      <p class="quick-desc" id="qDesc"></p>
+      <div class="quick-meta">
+        <span id="qSize"></span>
+        <strong id="qPrice"></strong>
+      </div>
+      <div class="quick-actions">
+        <button class="btn-buy">Buy Now</button>
+        <button class="btn-cart">Add to Bag</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<section class="video-section" id="coming-soon">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/videos/vid.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-overlay">
+
+    <!-- Mystery tagline -->
+    <p class="video-top-line">Coming Soon… The Secret You’ve Been Waiting For</p>
+
+    <!-- Divider -->
+    <span class="video-divider"></span>
+
+    <!-- Main heading -->
+    <h2 class="video-text">Crafted to Be Remembered</h2>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-timer" id="countdown">
+      <span id="days">00</span> :
+      <span id="hours">00</span> :
+      <span id="minutes">00</span> :
+      <span id="seconds">00</span>
+    </div>
+
+    <!-- Social Proof -->
+    <p class="social-proof">Be among the first to see it</p>
+
+    <!-- Notify Me (minimal, no button) -->
+    <div class="notify-wrapper">
+      <span class="notify-label">Notify me</span>
+      <input type="email" placeholder="your@email.com" />
+      <span class="notify-arrow">→</span>
+    </div>
+
+   
+    <!-- Social Links -->
+    <div class="video-socials">
+      <a href="#">Instagram</a>
+      <span>•</span>
+      <a href="#">YouTube</a>
+      <span>•</span>
+      <a href="#">X</a>
+    </div>
+
+    <!-- Scroll arrow -->
+    <div class="video-arrow"></div>
+
+    <!-- Sparkles -->
+    <div class="particle" style="top:20%; left:10%;"></div>
+    <div class="particle" style="top:50%; left:30%;"></div>
+    <div class="particle" style="top:80%; left:70%;"></div>
+    <div class="particle" style="top:35%; left:80%;"></div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<script>
+  // Set launch date (example: 3 days from now)
+  const launchDate = new Date();
+  launchDate.setDate(launchDate.getDate() + 3);
+
+  const daysEl = document.getElementById('days');
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = launchDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    daysEl.textContent = days.toString().padStart(2, '0');
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minutesEl.textContent = minutes.toString().padStart(2, '0');
+    secondsEl.textContent = seconds.toString().padStart(2, '0');
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
 
 
 
@@ -181,76 +309,98 @@
 
 
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="newsletter-inner">
-    <h2>Stay in the World of Fine Fragrance</h2>
-    <p>Be the first to discover new arrivals, exclusive offers & signature scents.</p>
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <h2>Stay in the World of Fine Fragrance</h2>
+      <p>Be the first to discover new arrivals, exclusive offers & signature scents.</p>
 
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
+  <!-- FOOTER -->
 
-    <!-- BRAND -->
-    <div class="footer-col">
-      <h3 class="footer-logo">J SCENTIQUE</h3>
-      <p class="footer-about">
-        Crafting timeless fragrances inspired by elegance, passion, and individuality.
-        Discover scents that leave a lasting impression.
-      </p>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- BRAND -->
+      <div class="footer-col footer-brand">
+        <h3 class="footer-logo">J SCENTIQUE</h3>
+        <span class="footer-divider"></span>
+        <p class="footer-about">
+          Crafting timeless fragrances inspired by elegance, passion, and individuality.
+          Discover scents that leave a lasting impression.
+        </p>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/best-seller.html">Shop</a></li>
+          <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- CUSTOMER CARE -->
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="footer-col footer-contact">
+        <h4>Contact Us</h4>
+        <p>Bengaluru, Karnataka, India</p>
+        <p>+91 98765 43210</p>
+        <p>support@jscentique.in</p>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- QUICK LINKS -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/best-seller.html">Shop</a></li>
-        <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
-        <li><a href="pages/about.html">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter-wide">
+      <h4>Stay Connected</h4>
+      <p>Exclusive drops & wedding season offers</p>
+
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" />
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
 
-    <!-- CUSTOMER CARE -->
-    <div class="footer-col">
-      <h4>Customer Care</h4>
-      <ul>
-        <li><a href="#">Shipping & Delivery</a></li>
-        <li><a href="#">Returns & Refunds</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
+    <!-- TRUST -->
+    <div class="footer-trust">
+      <p>Authentic fragrances • Secure payments • Pan-India delivery</p>
     </div>
 
-    <!-- CONTACT -->
-    <div class="footer-col">
-      <h4>Get in Touch</h4>
-      <p>
-        📍 Bengaluru, Karnataka, India<br>
-        📞 +91 98765 43210<br>
-        ✉️ support@jscentique.in
-      </p>
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <p>© 2025 J SCENTIQUE. All rights reserved.</p>
     </div>
-
-  </div>
-
-  <!-- BOTTOM -->
-  <div class="footer-bottom">
-    <p>© 2025 J SCENTIQUE. All rights reserved.</p>
-  </div>
-</footer>
-
-
+  </footer>
 
 
   <script src="assets/javascript/bestseller.js"></script>
